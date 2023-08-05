@@ -7,7 +7,7 @@ const queryStrings = {
 
 export const fetchData = async (query) => {
     const { app_id, app_key } = queryStrings
-    const url = `https://cors.zimjs.com/https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${app_id}&app_key=${app_key}`
+    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${app_id}&app_key=${app_key}`
     try {
         const response = await fetch(url)
         const responseData = await response.json();
@@ -21,7 +21,7 @@ export const fetchData = async (query) => {
 
 export const searchData = async (uri) => {
     const { app_id, app_key } = queryStrings;
-    const query = `https://cors.zimjs.com/https://api.edamam.com/api/recipes/v2/by-uri?type=public&uri=${uri}&app_id=${app_id}&app_key=${app_key}
+    const query = `https://api.edamam.com/api/recipes/v2/by-uri?type=public&uri=${uri}&app_id=${app_id}&app_key=${app_key}
     `
     try {
         const response = await fetch(query)
