@@ -7,7 +7,7 @@ const queryStrings = {
 
 export const fetchData = async (query) => {
     const { app_id, app_key } = queryStrings
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${app_id}&app_key=${app_key}`
+    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=3af13c60&app_key=1b613d8303640381c00380e67ed15b51`
     try {
         const response = await fetch(url)
         const responseData = await response.json();
